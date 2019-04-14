@@ -77,11 +77,7 @@ ListView getList() {
 return new ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
-            return new ListTile(
-            
-              onTap:_handleClick,
-              title: new Text('${items[index]}'),
-            );
+            return Image.asset("assets/images/ss1.png");
           });
 }
 
