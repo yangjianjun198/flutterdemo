@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import yjj.flutter.demo.MyFlutterActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     public void jumpFlutter(View view) {

@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':sharedpreferences_plugin', ':flutter_lib', ':flutter_demo'
 

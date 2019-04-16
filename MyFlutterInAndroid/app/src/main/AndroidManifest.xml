@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MyFlutterActivity"
+            android:name="yjj.flutter.demo.MyFlutterActivity"
             android:screenOrientation="portrait"
             />
     </application>

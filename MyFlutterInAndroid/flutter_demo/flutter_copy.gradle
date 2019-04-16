@@ -1,0 +1,26 @@
+task copyAssetsToTarget(type: Copy) {
+    from getFromPath()
+    include "flutter_assets/**" // the working dir and its files
+    include "app.so"
+    include "vm_snapshot_data"
+    include "vm_snapshot_instr"
+    include "isolate_snapshot_data"
+    include "isolate_snapshot_instr"
+    into getDescPath()
+}
+
+private String getFromPath() {
+    return project.file(project.projectDir.parentFile.parentFile).absolutePath +
+        "/flutter_module/.android/Flutter/build/intermediates/flutter/release";
+}
+
+private String getDescPath() {
+    return project.file(project.projectDir).absolutePath + "/src/main/assets";
+}
+
+afterEvaluate {
+    tasks.matching {
+        it.name.startsWith('process') && (it.name.endsWith('ReleaseJavaRes') || it.name.endsWith('DebugJavaRes'))
+    }.each { task -> task.dependsOn(copyAssetsToTarget)
+    }
+}
