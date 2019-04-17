@@ -2,7 +2,7 @@
 
 def scriptFile = getClass().protectionDomain.codeSource.location.toURI()
 def flutterProjectRoot = new File(scriptFile).parentFile.parentFile
-println(flutterProjectRoot)
+
 gradle.include ':flutter'
 gradle.project(':flutter').projectDir = new File(flutterProjectRoot, '.android/Flutter')
 

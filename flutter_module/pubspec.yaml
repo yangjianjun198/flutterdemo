@@ -30,7 +30,6 @@ dependencies:
   #网络库
   dio: ^1.0.9
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -44,10 +43,14 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add Flutter specific assets to your application, add an assets section, 
+  # To add Flutter specific assets to your application, add an assets section,
   # like this:
   assets:
-     - assets/images/ss1.png
+    - assets/images/ss1.png
+    - assets/images/ic_nav_news_normal.png
+    - assets/images/ic_nav_my_normal.png
+    - assets/images/ic_nav_news_actived.png
+    - assets/images/ic_nav_my_pressed.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -75,7 +78,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
-
 
   # This section identifies your Flutter project as a module meant for
   # embedding in a native host app.  These identifiers should _not_ ordinarily
