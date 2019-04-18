@@ -67,7 +67,7 @@ class NativeImageProvider extends ImageProvider<NativeImageProvider> {
     String path = "";
     try {
       path = await _channel.invokeMethod('getImage', imageName);
-    } catch (e) {}
+    } on MissingPluginException catch (ignore) {}
     return new Directory(path);
   }
 }

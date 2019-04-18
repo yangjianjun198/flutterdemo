@@ -40,7 +40,6 @@ public class NativeImageGetPlugin extends BaseNativePlugin {
     }
 
     private void getNativeImage(final String imageId, final MethodChannel.Result result) {
-        Log.d("yjj", "thread name " + Thread.currentThread().getName());
         String drawableName = getImageId(imageId);
         int drawableId = context.getResources().getIdentifier(drawableName, "drawable", context.getPackageName());
         if (drawableId == 0) {

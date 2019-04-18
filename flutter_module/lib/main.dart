@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_module/common/net/NetWork.dart';
 import 'pages/HomePage.dart';
 import 'pages/MinePage.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(AppEntry());
 
