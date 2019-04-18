@@ -51,6 +51,7 @@ flutter:
     - assets/images/ic_nav_my_normal.png
     - assets/images/ic_nav_news_actived.png
     - assets/images/ic_nav_my_pressed.png
+    - assets/images/ic_launcher_round.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

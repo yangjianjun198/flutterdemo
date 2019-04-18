@@ -13,17 +13,16 @@ public class PluginRegister {
 
     public static void register(FlutterView flutterView, List<MethondChannelEntry> entries) {
         for (MethondChannelEntry entry : entries) {
-            new MethodChannel(flutterView, entry.methodName).setMethodCallHandler(entry.messageHandler);
+            new MethodChannel(flutterView, entry.messageHandler.getPluginName()).setMethodCallHandler(
+                entry.messageHandler);
         }
     }
 
     public static class MethondChannelEntry {
-        public MethodChannel.MethodCallHandler messageHandler;
-        public String methodName;
+        public BaseNativePlugin messageHandler;
 
-        public MethondChannelEntry(MethodChannel.MethodCallHandler messageHandler, String methodName) {
+        public MethondChannelEntry(BaseNativePlugin messageHandler) {
             this.messageHandler = messageHandler;
-            this.methodName = methodName;
         }
     }
 }

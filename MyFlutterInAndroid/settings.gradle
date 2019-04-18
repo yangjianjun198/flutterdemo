@@ -1,2 +1,2 @@
-include ':app', ':sharedpreferences_plugin', ':flutter_lib', ':flutter_demo'
+include ':app', ':sharedpreferences_plugin', ':flutter_lib', ':flutter_demo', ':nativeimage_plugin'
 

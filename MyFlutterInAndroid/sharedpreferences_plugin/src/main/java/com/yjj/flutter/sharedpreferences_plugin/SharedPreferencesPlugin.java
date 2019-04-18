@@ -22,13 +22,13 @@ import java.util.Set;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
+import yjj.flutter.BaseNativePlugin;
 
 /** SharedPreferencesPlugin */
 @SuppressWarnings("unchecked")
-public class SharedPreferencesPlugin implements MethodCallHandler {
+public class SharedPreferencesPlugin extends BaseNativePlugin {
     private static final String SHARED_PREFERENCES_NAME = "FlutterSharedPreferences";
-    public static final String CHANNEL_NAME = "plugins.flutter.io/shared_preferences";
+    private static final String CHANNEL_NAME = "plugins.flutter.io/shared_preferences";
 
     // Fun fact: The following is a base64 encoding of the string "This is the prefix for a list."
     private static final String LIST_IDENTIFIER = "VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu";
@@ -39,6 +39,11 @@ public class SharedPreferencesPlugin implements MethodCallHandler {
 
     public SharedPreferencesPlugin(Context context) {
         preferences = context.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE);
+    }
+
+    @Override
+    public String getPluginName() {
+        return CHANNEL_NAME;
     }
 
     private List<String> decodeList(String encodedList) throws IOException {

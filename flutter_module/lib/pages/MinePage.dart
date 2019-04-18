@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../common/NativeImageProvider.dart';
 
 class MinePage extends StatefulWidget {
   @override
@@ -15,8 +16,9 @@ class _MinePageState extends State<MinePage> {
           title: Text("我的"),
         ),
         body: Center(
-            child: Text(
-                "second content")) // This trailing comma makes auto-formatting nicer for build methods.
+            child: new Image(
+          image: new NativeImageProvider("ic_launcher_round.png"),
+        )) // This trailing comma makes auto-formatting nicer for build methods.
         );
   }
 }
